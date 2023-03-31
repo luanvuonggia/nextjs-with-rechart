@@ -1,5 +1,5 @@
 
-import { LineChart as LineRechart, Line, Tooltip, XAxis, YAxis, CartesianGrid } from "recharts";
+import { LineChart as LineRechart, Line, Tooltip, XAxis, YAxis, CartesianGrid, CartesianAxis } from "recharts";
 const data = [
   { name: "Page A", uv: 4000, pv: 2400, amt: 2400 },
   { name: "Page B", uv: 3000, pv: 1398, amt: 2210 },
@@ -23,7 +23,7 @@ const LineChart = () => {
 
   return (
     <LineRechart
-      width={700}
+      width={800}
       height={500}
       data={data}
       onMouseMove={onMouseMove}
@@ -42,10 +42,11 @@ const LineChart = () => {
         strokeWidth={4}
         dot={false}
         activeDot={false}
+
       />
       <CartesianGrid strokeWidth={1} vertical={false} stroke="#DEDEE7" />
-      <XAxis />
-      <YAxis />
+      <XAxis tickLine={false} stroke="#DEDEE7" tick={{ fill: "#A4A4B3", fontSize: 12 }} />
+      <YAxis axisLine={false} tickLine={false} tickCount={5} stroke="#DEDEE7" tick={{ fill: "#A4A4B3", fontSize: 12 }} />
       <Tooltip />
     </LineRechart>
   )
