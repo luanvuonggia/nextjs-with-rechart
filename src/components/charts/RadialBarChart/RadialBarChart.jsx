@@ -39,7 +39,7 @@ const renderLegend = (props) => {
     <div style={{ display: 'flex', gap: "24px" }}>
       {
         payload.map((entry, index) => (
-          <div>
+          <div key={index}>
             <span style={{
               height: "15px",
               width: "15px",

@@ -52,7 +52,7 @@ const Main = (props: IMainProps) => (
 
       <main className="content py-5 text-xl">{props.children}</main>
 
-      <footer className="border-t border-gray-300 py-8 text-center text-sm">
+      <footer className="py-8 text-center text-sm">
         © Copyright {new Date().getFullYear()} @luanvuonggia
       </footer>
     </div>

@@ -19,3 +19,9 @@ a:hover {
 .content ul {
   @apply my-6;
 }
+
+@keyframes grow{
+  from{
+    transform: scaleY(0);
+  }
+}
